@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "infra:up",
+        "type": "shell",
+        "command": "mvnw -N -Pinfra-up exec:exec",
+        "options": { "cwd": "${workspaceFolder}" },
+        "problemMatcher": []
+      },
+      {
+        "label": "infra:down",
+        "type": "shell",
+        "command": "mvnw -N -Pinfra-down exec:exec",
+        "options": { "cwd": "${workspaceFolder}" },
+        "problemMatcher": []
+      },
+      {
+        "label": "backend:run",
+        "type": "shell",
+        "command": "mvnw -f next-springboot-backend spring-boot:run",
+        "options": { "cwd": "${workspaceFolder}" },
+        "problemMatcher": []
+      },
+      {
+        "label": "frontend:dev",
+        "type": "shell",
+        "command": "pnpm dev",
+        "options": { "cwd": "${workspaceFolder}/next-springboot-front" },
+        "problemMatcher": []
+      },
+      {
+        "label": "dev:all",
+        "dependsOn": ["infra:up", "backend:run", "frontend:dev"],
+        "dependsOrder": "sequence"
+      }
+    ]
+  }
+  

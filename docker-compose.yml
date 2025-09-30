@@ -1,0 +1,22 @@
+# docker-compose.yml（ルート）
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: appdb
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: apppass
+    ports: [ "15432:5432" ]
+    volumes: [ "pgdata:/var/lib/postgresql/data" ]
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:25.0
+    command: start-dev --http-port=8081
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: dev-mem
+    ports: [ "18081:8081" ]
+
+volumes:
+  pgdata:
