@@ -1,0 +1,25 @@
+# Maven/Java
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+*.iml
+*.class
+.hs_err_pid*
+.rebel.xml
+
+# Node/Next
+**/node_modules/
+**/.next/
+**/.vercel/
+**/out/
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+# Env
+**/.env
+**/.env.*
+!.env.example
