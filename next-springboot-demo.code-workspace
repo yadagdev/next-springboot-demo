@@ -4,21 +4,17 @@
       "path": "."
     },
     {
-      "path": "next-springboot-demo/next-springboot-front"
+      "path": "next-springboot-backend"
     },
     {
-      "path": "next-springboot-demo/next-springboot-backend"
+      "path": "next-springboot-front"
     },
   //   {
   //     "path": "next-springboot-demo-pw"
   //   }
   ],
   "settings": {
-    "emeraldwalk.runonsave": {
-      "commands": {
-        "files.exclude": { "**/target": true, "**/.next": true, "**/node_modules": true},
-        "editor.formatOnSave": true
-      }
-    },
+    "files.exclude": { "**/target": true, "**/.next": true, "**/node_modules": true },
+    "java.configuration.updateBuildConfiguration": "automatic"
   }
 }
