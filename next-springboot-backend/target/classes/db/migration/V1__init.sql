@@ -1,6 +1,9 @@
-create table if not exists posts (
-  id bigserial primary key,
-  title text not null,
-  body text not null,
-  created_at timestamptz default now()
+-- PostgreSQL（pgcrypto使用）:
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
+CREATE TABLE posts (
+  id         UUID PRIMARY KEY,
+  title      VARCHAR(200) NOT NULL,
+  body       TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
