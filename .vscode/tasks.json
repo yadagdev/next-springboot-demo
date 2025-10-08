@@ -4,21 +4,21 @@
       {
         "label": "infra:up",
         "type": "shell",
-        "command": "mvnw -N -Pinfra-up exec:exec",
+        "command": "./mvnw -N -Pinfra-up exec:exec",
         "options": { "cwd": "${workspaceFolder}" },
         "problemMatcher": []
       },
       {
         "label": "infra:down",
         "type": "shell",
-        "command": "mvnw -N -Pinfra-down exec:exec",
+        "command": "./mvnw -N -Pinfra-down exec:exec",
         "options": { "cwd": "${workspaceFolder}" },
         "problemMatcher": []
       },
       {
         "label": "backend:run",
         "type": "shell",
-        "command": "mvnw -f next-springboot-backend spring-boot:run",
+        "command": "./mvnw -f next-springboot-backend spring-boot:run",
         "options": { "cwd": "${workspaceFolder}" },
         "problemMatcher": []
       },
