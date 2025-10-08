@@ -1,0 +1,13 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.import.maven.enabled": true,
+  "java.jdt.ls.vmargs": "-javaagent:\"${env:USERPROFILE}\\.m2\\repository\\org\\projectlombok\\lombok\\1.18.36\\lombok-1.18.36.jar\" -Xmx2G -Xms256m",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "C:\\Program Files\\OpenJDK\\jdk-21.0.2",
+      "default": true
+    }
+],
+"java.compile.nullAnalysis.mode": "automatic"
+}
