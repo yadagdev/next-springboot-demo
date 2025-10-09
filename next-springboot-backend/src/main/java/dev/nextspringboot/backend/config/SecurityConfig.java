@@ -32,8 +32,9 @@ public class SecurityConfig {
 
     http.csrf(AbstractHttpConfigurer::disable)
         .authorizeHttpRequests(auth -> auth
-            .requestMatchers("/api/health", "/actuator/health").permitAll()
+            .requestMatchers("/api/health", "/actuator/health", "/api/auth/register", "/api/auth/login", "/api/auth/refresh").permitAll()
             .requestMatchers("/api/posts/**").hasRole("post_writer")
+            .requestMatchers("api/auth/logout", "/api/auth/change-password").authenticated()
             .anyRequest().authenticated())
         .sessionManagement(sm -> sm.sessionCreationPolicy(
             org.springframework.security.config.http.SessionCreationPolicy.STATELESS));
